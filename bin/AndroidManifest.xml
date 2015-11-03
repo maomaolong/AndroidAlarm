@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.thumbshow.Alarm"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".AlarmReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED"
+            android:enabled="true"  
+            android:exported="false"  >
+            <intent-filter>
+                <action android:name="android.alarm.alarm.action" />
+            </intent-filter>
+            <intent-filter>       
+                <action android:name="android.intent.action.BOOT_COMPLETED" />      
+            </intent-filter>   
+            <intent-filter>  
+				 <action android:name="android.intent.action.MEDIA_MOUNTED" />  
+				 <action android:name="android.intent.action.MEDIA_UNMOUNTED" />  
+				 <action android:name="android.intent.action.MEDIA_EJECT" />  
+				 <data android:scheme="file" >  
+				 </data>    
+			</intent-filter>   
+        </receiver>
+    </application>
+    
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+</manifest>
