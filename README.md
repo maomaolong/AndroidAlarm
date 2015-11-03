@@ -1,6 +1,6 @@
 # AndroidAlarm
 这个是为了在游戏中实现消息推送实现的简单例子.  
-------------
+-------------
 下面是参考文章链接  
 * [Android 实现闹钟功能](http://blog.sina.com.cn/s/blog_88fcfaba010193et.html)
 * [notification新旧用法 notification builder](http://www.2cto.com/kf/201311/255084.html)
